@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💜 For Netrali</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Screen 1: The Hook -->
+    <div id="screen1" class="screen active">
+        <div class="hearts-bg"></div>
+        <div class="content">
+            <h1 class="fade-in">Hey Netrali, I need 10 seconds of your life…</h1>
+            <button class="glow-button" onclick="goToScreen(2)">Continue</button>
+        </div>
+    </div>
+
+    <!-- Screen 2: The Big Question -->
+    <div id="screen2" class="screen">
+        <div class="hearts-bg"></div>
+        <div class="content">
+            <h1 class="fade-in">Will you be my Valentine?</h1>
+            <div class="button-container">
+                <button class="yes-button" onclick="goToScreen(3)">YES</button>
+                <button class="no-button" id="noButton">NO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen 3: The Romantic Reveal -->
+    <div id="screen3" class="screen">
+        <div class="hearts-bg"></div>
+        <div class="sparkles"></div>
+        <div class="content">
+            <div class="polaroid">
+                <img src="netrali-photo.jpg" alt="Netrali" id="valentinePhoto">
+                <div class="polaroid-caption">Forever 💜</div>
+            </div>
+            <h2 class="reveal-message">Yeah I know you never gonna say no 😉😙</h2>
+            <button class="glow-button" onclick="goToScreen(4)">Continue</button>
+        </div>
+    </div>
+
+    <!-- Screen 4: The Funny Finale -->
+    <div id="screen4" class="screen">
+        <div class="hearts-bg"></div>
+        <div class="confetti" id="confetti"></div>
+        <div class="content">
+            <h1>Our Compatibility Score</h1>
+            <div class="loading-container" id="loadingContainer">
+                <div class="loading-bar">
+                    <div class="loading-fill" id="loadingFill"></div>
+                </div>
+                <p class="loading-text">Calculating...</p>
+            </div>
+            <div class="score-reveal" id="scoreReveal">
+                <h2 class="score">100000%</h2>
+                <p class="score-subtitle">Perfect Match! 💕</p>
+            </div>
+            <div class="message-container" id="messageContainer">
+                <p class="fade-message">Write any message for Deepak</p>
+                <div class="message-input-wrapper">
+                    <textarea id="messageInput" placeholder="Type your message here..." maxlength="500"></textarea>
+                    <button class="send-button" id="sendButton" onclick="sendMessage()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+                <p class="sent-confirmation" id="sentConfirmation">Message sent! 💜</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
